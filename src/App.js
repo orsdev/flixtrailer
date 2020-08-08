@@ -9,8 +9,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Hero
-        fetchUrl={requests.popular} />
+      <Hero />
       <MovieGrid
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.netflix} />
