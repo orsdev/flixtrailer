@@ -3,6 +3,7 @@ import MovieGrid from './component/MovieGrid';
 import requests from './config/requests';
 import Nav from './component/Nav';
 import Hero from './component/hero';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <MovieGrid
         title="POPULAR MOVIES"
         fetchUrl={requests.popular} />
+      <Footer />
     </div>
   );
 }
