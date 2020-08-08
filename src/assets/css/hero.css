@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 650px;
+  position: relative;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
+  overflow: hidden;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.hero__body {
+  position: relative;
+  padding-top: 90px;
+  height: 100%;
+  color: white;
+}
+.hero__body h1 {
+  position: relative;
+  z-index: 3;
+}
+.hero__body p {
+  position: relative;
+  z-index: 3;
+  width: 400px;
+  font-size: 2rem;
+}
+.hero__body-btn {
+  position: relative;
+  z-index: 3;
+  width: 160px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+.hero__body img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  object-fit: cover;
+  top: 0;
+}
+.hero__form {
+  position: relative;
+  z-index: 4;
+  width: 650px;
+  margin-top: 50px;
+}
+.hero__form h3 {
+  font-size: 2.5rem;
+}
+.hero__form .form-group {
+  display: flex;
+}
+.hero__form input {
+  display: inline-block;
+  width: calc(100% - 160px);
+  height: 60px;
+  font-size: 2rem;
+}
+.hero__form button {
+  width: 160px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 0;
+}
+
+@media (max-width: 750px) {
+  .hero__form {
+    width: 90%;
+  }
+  .hero__form button {
+    width: 140px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .hero {
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: 720px;
+  }
+  .hero__body {
+    padding-top: 40px;
+  }
+  .hero__body h1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .hero__body p {
+    width: 95%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .hero__form input {
+    width: 100%;
+  }
+  .hero__form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .hero__form .form-group {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=hero.css.map */
