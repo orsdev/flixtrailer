@@ -1,0 +1,71 @@
+.movies__wrapper {
+  margin-top: 80px;
+}
+
+.movies__title {
+  font-size: 3rem;
+}
+.movies__item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  overflow-x: scroll;
+}
+.movies__item::-webkit-scrollbar {
+  display: none;
+}
+.movies__item section {
+  position: relative;
+  min-width: 300px;
+  margin-right: 10px;
+}
+.movies__item-poster {
+  width: 100%;
+  transition: transform 450ms;
+  -webkit-transition: transform 450ms;
+  -moz-transition: transform 450ms;
+  -ms-transition: transform 450ms;
+  -o-transition: transform 450ms;
+}
+.movies__item-poster img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.movies__item-poster:hover {
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
+}
+.movies__item-about {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  color: white;
+}
+.movies__item-about h3 {
+  font-size: 2.5rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.movies__item-about p {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  background: rgba(0, 0, 0, 0.7);
+}
+.movies__item .btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+.movies__item .btn:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=moviegrid.css.map */
