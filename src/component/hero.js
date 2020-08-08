@@ -1,37 +1,45 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import axios from "../axios/axios";
+import requests from '../config/requests';
 import "../assets/css/hero.css";
 
+const idIsValid = (data) => {
+  return data.filter(item => item.id);
+};
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
-const Hero = ({ fetchUrl }) => {
+const Hero = () => {
 
   const [movie, setMovie] = useState([]);
   const [populateMovie, setpopulateMovie] = useState(false);
   useEffect(() => {
     async function fetchMovies() {
-      const request = await axios.get(fetchUrl);
-      const [response] = await request.data.results;
+      const request = await axios.get(requests.popular);
+      const response = idIsValid(request.data.results);
+      const random = Math.floor(Math.random() * response.length - 1);
       const data = [];
+
       if (request.status === 200) {
-        data.push(response);
+        data.push(response[random]);
         setMovie(data);
         setpopulateMovie(true);
       }
     }
 
     fetchMovies();
-  }, [populateMovie, fetchUrl]);
+  }, []);
 
   return (
     <div className="hero">
       <div className="hero__overlay"></div>
       <div className="hero__body">
-        {(setpopulateMovie && movie) && movie.map((item) => {
+        {(populateMovie && movie) && movie.map((item) => {
           return (
             <Fragment key={item.id}>
-              <h1 className="display-3 ml-4"> {item.original_title} </h1>
+              <h1 className="display-3 ml-4">
+                {item?.original_title || item?.title || item?.name}
+              </h1>
               <img src={`${baseUrl}${item.backdrop_path}`}
                 alt={item.original_title}
               />
