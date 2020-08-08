@@ -1,0 +1,22 @@
+.footer {
+  background: black;
+  padding: 50px 10px;
+}
+.footer h5 {
+  font-size: 4rem;
+  font-family: "Dancing Script", cursive;
+}
+.footer small {
+  opacity: 0.7;
+  font-size: 1.5rem;
+}
+.footer small span {
+  opacity: 0.8;
+}
+.footer small .logo {
+  color: red;
+  font-family: "Dancing Script", cursive;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=footer.css.map */
