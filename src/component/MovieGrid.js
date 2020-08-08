@@ -4,6 +4,10 @@ import "../assets/css/moviegrid.css";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 
+const idIsValid = (data) => {
+  return data.filter(item => item.id);
+};
+
 const MovieGrid = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([]);
 
@@ -11,7 +15,7 @@ const MovieGrid = ({ title, fetchUrl }) => {
     async function fetchMovies() {
       const request = await axios.get(fetchUrl);
       if (request.status === 200) {
-        setMovies(await request.data.results);
+        setMovies(idIsValid(request.data.results));
       }
     }
 
