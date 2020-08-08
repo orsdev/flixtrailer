@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import axios from "../axios/axios";
-import Wick from "../assets/img/wick.jpg";
 import "../assets/css/hero.css";
 
 
@@ -23,7 +22,7 @@ const Hero = ({ fetchUrl }) => {
     }
 
     fetchMovies();
-  }, [populateMovie]);
+  }, [populateMovie, fetchUrl]);
 
   return (
     <div className="hero">
