@@ -22,7 +22,7 @@ const Hero = () => {
         }
       })
       .catch(function (error) {
-        console.log(error, 'something bad');
+        console.log(error, 'an error occured');
       })
 
   }, []);
@@ -37,11 +37,11 @@ const Hero = () => {
               <h1 className="display-4 ml-4">
                 {item?.original_title || item?.title || item?.name}
               </h1>
-              <img src={`${baseUrl}${item.backdrop_path}`}
+              <img src={`${baseUrl}${item?.backdrop_path}`}
                 alt={item.original_title}
               />
               <p className="hero__body-about ml-4 my-5">
-                {item.overview.length && item.overview.substring(0, 150) + '...'}
+                {item?.overview.length && item?.overview.substring(0, 150) + '...'}
               </p>
               <button
                 className="d-block btn-lg btn btn-danger ml-4 hero__body-btn">
