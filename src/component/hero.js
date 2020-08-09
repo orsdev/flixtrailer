@@ -11,18 +11,20 @@ const Hero = () => {
   const [movie, setMovie] = useState([]);
   const [populateMovie, setpopulateMovie] = useState(false);
   useEffect(() => {
-    async function fetchMovies() {
-      const request = await axios.get(requests.popular);
-      const response = idIsValid(request.data.results);
-      const random = Math.floor(Math.random() * response.length - 1);
 
-      if (request.status === 200) {
-        setMovie([response[random]]);
-        setpopulateMovie(true);
-      }
-    }
+    axios.get(requests.popular)
+      .then(function (response) {
+        const data = idIsValid(response.data.results);
+        const random = Math.floor(Math.random() * data.length - 1);
+        if (response && response.status === 200) {
+          setMovie([data[random]]);
+          setpopulateMovie(true);
+        }
+      })
+      .catch(function (error) {
+        console.log(error, 'something bad');
+      })
 
-    fetchMovies();
   }, []);
 
   return (
@@ -31,7 +33,7 @@ const Hero = () => {
       <div className="hero__body">
         {(populateMovie && movie.length) && movie.map((item) => {
           return (
-            <Fragment key={item.id || item.genre_ids[0] || item.vote_average + item.vote_count}>
+            <Fragment key={item?.id || item?.genre_ids[0] || item?.vote_average + item?.vote_count}>
               <h1 className="display-4 ml-4">
                 {item?.original_title || item?.title || item?.name}
               </h1>
@@ -39,7 +41,7 @@ const Hero = () => {
                 alt={item.original_title}
               />
               <p className="hero__body-about ml-4 my-5">
-                {item.overview.length && item.overview.substring(0, 50) + '...'}
+                {item.overview.length && item.overview.substring(0, 150) + '...'}
               </p>
               <button
                 className="d-block btn-lg btn btn-danger ml-4 hero__body-btn">
