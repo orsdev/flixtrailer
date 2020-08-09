@@ -40,7 +40,7 @@ const withErrorHandler = (WrappedComponent, axios) => {
           <Popup
             onClick={this.closePopup}
             show={this.state.error} />
-          <WrappedComponent {...this.props} />
+          <WrappedComponent error={this.state.error} {...this.props} />
         </Fragment>
       )
     }
