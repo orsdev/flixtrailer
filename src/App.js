@@ -11,14 +11,14 @@ function App() {
       <Nav />
       <Hero />
       <MovieGrid
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.netflix} />
+        title="ACTION MOVIES"
+        fetchUrl={requests.action} />
       <MovieGrid
         title="TRENDING NOW"
         fetchUrl={requests.trending} />
       <MovieGrid
-        title="TOP RATED"
-        fetchUrl={requests.topRated} />
+        title="HORROR MOVIES"
+        fetchUrl={requests.horror} />
       <MovieGrid
         title="POPULAR MOVIES"
         fetchUrl={requests.popular} />
