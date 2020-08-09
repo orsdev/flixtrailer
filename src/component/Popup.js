@@ -5,7 +5,6 @@ const Popup = ({ show, onClick }) => {
   return (
     <Fragment>
       {show !== null && <div
-        onClick={onClick}
         className="overlay">
         <div className="popup">
           <div className="popup--header">
