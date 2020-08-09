@@ -10,9 +10,13 @@
   padding: 10px;
   display: flex;
   overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .movies__item::-webkit-scrollbar {
-  display: none;
+  background: #161616;
+}
+.movies__item::-webkit-scrollbar-thumb {
+  background: red;
 }
 .movies__item section {
   position: relative;

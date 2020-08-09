@@ -12,9 +12,14 @@
       padding: 10px;
       display: flex;
       overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
 
       &::-webkit-scrollbar {
-         display: none;
+         background: rgb(22, 22, 22);
+      }
+
+      &::-webkit-scrollbar-thumb {
+         background: red;
       }
 
       section {
