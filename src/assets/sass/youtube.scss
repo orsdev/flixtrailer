@@ -1,0 +1,36 @@
+.youtube-container {
+   position: relative;
+   width: 600px;
+   height: 70vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+
+   button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transition: all 200ms;
+      padding: 0;
+      font-size: 3rem;
+      line-height: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      background: transparent;
+      border: none;
+
+      &:hover {
+         color: red;
+      }
+   }
+}
+
+.youtube {
+   width: 100%;
+   height: calc(100% -100px);
+   z-index: 999;
+   height: calc();
+   position: relative;
+   object-fit: contain;
+}

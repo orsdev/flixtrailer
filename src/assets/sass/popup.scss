@@ -1,4 +1,4 @@
-.overlay {
+.popup--overlay {
    position: fixed;
    width: 100vw;
    height: 100vh;
@@ -8,7 +8,11 @@
    left: 0;
    right: 0;
    background: rgba(0, 0, 0, 0.7);
-   transition: opacity 500ms;
+   transition: opacity 200ms;
+   -webkit-transition: opacity 200ms;
+   -moz-transition: opacity 200ms;
+   -ms-transition: opacity 200ms;
+   -o-transition: opacity 200ms;
 }
 
 .popup {
