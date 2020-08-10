@@ -109,3 +109,13 @@
       }
    }
 }
+
+@media (max-width: 599px) {
+   .movies {
+      &__popular {
+         .movies__item {
+            grid-template-columns: 1fr;
+         }
+      }
+   }
+}
