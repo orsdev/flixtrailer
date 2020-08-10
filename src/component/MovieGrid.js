@@ -15,6 +15,7 @@ const MovieGrid = (props) => {
 
   const { title, fetchUrl, error } = props;
   const { trailerUrl, onSetURL, onRemoveURL, history } = props;
+  const { className } = props;
 
   const [movies, setMovies] = useState([]);
   const [loadTrailer, setLoadTrailer] = useState(false);
@@ -25,6 +26,7 @@ const MovieGrid = (props) => {
       if (request && request.status) {
         const response = idIsValid(request.data.results);
         setMovies(response);
+        console.log(request);
       }
     }
 
@@ -61,7 +63,7 @@ const MovieGrid = (props) => {
   return (
     <Fragment>
       {!loadTrailer ?
-        <div className="movies__wrapper px-5">
+        <div className={`movies__wrapper px-5 ${className}`}>
           <h2 className="text-light movies__title">{title}</h2>
           <div className="movies">
             {

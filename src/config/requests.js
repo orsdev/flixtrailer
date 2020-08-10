@@ -7,7 +7,8 @@ const requests = {
   netflix: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
   topRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
   horror: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
-  action: `/discover/movie?api_key=${API_KEY}&with_genres=28`
+  action: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+  nowPlaying: `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
 }
 
 export default requests;

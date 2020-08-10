@@ -11,17 +11,13 @@ const Home = () => {
       <Nav />
       <Hero />
       <MovieGrid
-        title="ACTION MOVIES"
-        fetchUrl={requests.action} />
-      {/* <MovieGrid
-        title="TRENDING NOW"
-        fetchUrl={requests.trending} />
+        className="movies__now-playing"
+        title="NOW PLAYING"
+        fetchUrl={requests.nowPlaying} />
       <MovieGrid
-        title="HORROR MOVIES"
-        fetchUrl={requests.horror} />
-      <MovieGrid
+        className="movies__popular"
         title="POPULAR MOVIES"
-        fetchUrl={requests.popular} /> */}
+        fetchUrl={requests.popular} />
       <Footer />
     </Fragment>
   )
