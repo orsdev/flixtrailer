@@ -8,7 +8,7 @@ import Spinner from "./Spinner";
 import "../assets/css/moviegrid.css";
 import { connect } from 'react-redux';
 import * as actions from "../store/actions";
-import withErrorHandler from "./withErrorHandler";
+import axiosErrorHandler from "./Hoc/axiosErrorHandler";
 import LoadMovies from "./LoadMovies";
 
 const MovieGrid = (props) => {
@@ -99,4 +99,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(withRouter(MovieGrid), axios));
+export default connect(mapStateToProps, mapDispatchToProps)(axiosErrorHandler(withRouter(MovieGrid), axios));
