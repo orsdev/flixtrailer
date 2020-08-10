@@ -34,7 +34,7 @@ const Hero = () => {
         {(populateMovie && movie.length) && movie.map((item) => {
           return (
             <Fragment key={item?.id || item?.genre_ids[0] || item?.vote_average + item?.vote_count}>
-              <h1 className="display-4 ml-4">
+              <h1 className="display-3 font-weight-bold ml-4">
                 {item?.original_title || item?.title || item?.name}
               </h1>
               <img src={`${baseUrl}${item?.backdrop_path}`}
