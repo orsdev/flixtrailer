@@ -26,7 +26,6 @@ const MovieGrid = (props) => {
       if (request && request.status) {
         const response = idIsValid(request.data.results);
         setMovies(response);
-        console.log(request);
       }
     }
 
