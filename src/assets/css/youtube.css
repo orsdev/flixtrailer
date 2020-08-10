@@ -28,7 +28,6 @@
   width: 100%;
   height: calc(100% -100px);
   z-index: 999;
-  height: calc();
   position: relative;
   object-fit: contain;
 }
