@@ -1,0 +1,121 @@
+.movies__wrapper {
+   margin-top: 80px;
+}
+
+.movies {
+   &__title {
+      font-size: 3rem;
+   }
+
+   &__now-playing {
+      .movies__item {
+         display: flex;
+         overflow-x: scroll;
+         -webkit-overflow-scrolling: touch;
+
+         &::-webkit-scrollbar {
+            background: rgb(22, 22, 22);
+         }
+
+         &::-webkit-scrollbar-thumb {
+            background: red;
+         }
+      }
+
+      section {
+         min-width: 300px;
+         margin-right: 10px;
+      }
+   }
+
+   &__popular {
+      h2 {
+         text-align: center;
+         margin-top: 20px;
+         margin-bottom: 20px;
+      }
+
+      .movies__item {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+         gap: 20px;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   &__item {
+      width: 100%;
+      padding: 10px;
+
+      section {
+         position: relative;
+      }
+
+      &-poster {
+         width: 100%;
+         transition: transform 450ms;
+         -webkit-transition: transform 450ms;
+         -moz-transition: transform 450ms;
+         -ms-transition: transform 450ms;
+         -o-transition: transform 450ms;
+
+         img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+         }
+
+         &:hover {
+            transform: scale(1.04);
+            -webkit-transform: scale(1.04);
+            -moz-transform: scale(1.04);
+            -ms-transform: scale(1.04);
+            -o-transform: scale(1.04);
+         }
+      }
+
+      &-about {
+         position: absolute;
+         top: 20px;
+         left: 10px;
+         color: white;
+
+         h3 {
+            font-size: 2.5rem;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+         }
+
+         p {
+            font-size: 1.5rem;
+            opacity: 0.7;
+            background: rgba(0, 0, 0, 0.7);
+         }
+      }
+
+      .btn {
+         position: absolute;
+         bottom: 20px;
+         right: 20px;
+         color: white;
+         font-weight: bold;
+         font-size: 1.6rem;
+         background: rgba(0, 0, 0, 0.7);
+
+         &:hover {
+            opacity: 0.8;
+         }
+      }
+   }
+}
+
+@media (max-width: 599px) {
+   .movies {
+      &__popular {
+         .movies__item {
+            grid-template-columns: 1fr;
+         }
+      }
+   }
+}
