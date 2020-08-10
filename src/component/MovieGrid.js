@@ -54,7 +54,6 @@ const MovieGrid = (props) => {
         onSetURL(urlParams.get('v'));
       })
       .catch((error) => {
-        console.log('bad things happen');
         setLoadTrailer(false);
         onRemoveURL();
       })

@@ -40,7 +40,7 @@ const Hero = () => {
               <img src={`${baseUrl}${item?.backdrop_path}`}
                 alt={item?.original_title || item?.title || item?.name} />
               <p className="hero__body-about ml-4 my-5">
-                {item?.overview.length && item?.overview.substring(0, 150) + '...'}
+                {item?.overview.length && item?.overview.substring(0, 250) + '...'}
               </p>
             </Fragment>
           )
