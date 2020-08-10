@@ -5,23 +5,39 @@
 .movies__title {
   font-size: 3rem;
 }
-.movies__item {
-  width: 100%;
-  padding: 10px;
+.movies__now-playing .movies__item {
   display: flex;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.movies__item::-webkit-scrollbar {
+.movies__now-playing .movies__item::-webkit-scrollbar {
   background: #161616;
 }
-.movies__item::-webkit-scrollbar-thumb {
+.movies__now-playing .movies__item::-webkit-scrollbar-thumb {
   background: red;
+}
+.movies__now-playing section {
+  min-width: 300px;
+  margin-right: 10px;
+}
+.movies__popular h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.movies__popular .movies__item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.movies__item {
+  width: 100%;
+  padding: 10px;
 }
 .movies__item section {
   position: relative;
-  min-width: 300px;
-  margin-right: 10px;
 }
 .movies__item-poster {
   width: 100%;
