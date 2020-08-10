@@ -1,0 +1,3 @@
+export const SET_TRAILER_URL = "SET_TRAILER_URL";
+export const REMOVE_TRAILER_URL = "REMOVE_TRAILER_URL";
+export const SET_MOVIES = "SET_MOVIES";
